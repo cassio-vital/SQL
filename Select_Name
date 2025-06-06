@@ -46,4 +46,6 @@ SELECT capital, name
   FROM world
  WHERE capital LIKE CONCAT('%',name,'%') and capital != name
 
-15//
+SELECT name, replace(capital,name,'')
+  FROM world
+ WHERE capital LIKE CONCAT(name,'%') and LENGTH(capital) > LENGTH(name)
