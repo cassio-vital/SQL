@@ -54,3 +54,10 @@ FROM nobel
 WHERE winner LIKE 'Sir%'
 ORDER  BY yr DESC, winner ASC
 
+SELECT winner, subject
+FROM nobel
+WHERE yr = 1984
+ORDER BY 
+  subject IN ('chemistry', 'physics'),  
+  subject,
+  winner
